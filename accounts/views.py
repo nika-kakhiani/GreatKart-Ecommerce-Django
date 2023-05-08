@@ -149,6 +149,7 @@ def dashboard(request):
     orders_count = orders.count()
 
     userprofile = UserProfile.objects.get(user_id=request.user.id)
+
     context = {
         "orders_count": orders_count,
         "userprofile": userprofile,
